@@ -1,0 +1,127 @@
+:root {
+    --primary: rgb(54, 69, 79);
+}
+* {
+    transition: all 0.3s ease-in-out;
+}
+body{
+    color: var(--primary);
+    font-weight: 600;
+    background-image: linear-gradient(to bottom right, rgba(0, 5, 14, 0.0125), rgba(13, 36, 48, 0.25));
+    min-height: 100vh;
+}
+h1 { 
+    font-family: Davinci;
+    font-weight: 1000;
+    font-size: 300%;
+} 
+@media screen and (max-width: 567px) { h1 { 
+    font-size: 200%; 
+} }
+@media screen and (max-width: 268px) { h1 { 
+    font-size: 150%; 
+} }
+@media screen and (max-width: 242px) { h1 { 
+    font-size: 100%; 
+} }
+main {
+    font-size: 108%;
+}
+input[type="text"]:focus, input[type="text"] {
+    border: 0px solid transparent;
+    border-right: none;
+    box-shadow: none;
+    border-radius: 6px 0 0 6px;
+}
+form { 
+    padding: 1.125%;
+    background-color: white !important;
+    border-radius: 8px 8px 24px 8px; 
+    background-color: transparent; 
+    border: 1.75px solid var(--primary);
+    box-shadow: -2px 4px 6px rgba(150, 150, 150, 0.5);
+} 
+#addTask { 
+    width: 12%;
+    border-radius: 0 6px 14px 0; 
+    border: 5px solid transparent;
+    border-left: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../assets/add.png);
+} 
+#addTask:hover, #addTask:active {
+    background-image: url(../assets/add.gif);
+}
+.edit {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../assets/edit.svg);
+}
+.edit:hover, .edit:active {
+    background-image: url(../assets/edit.gif);
+}
+.delete {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../assets/trash.svg);
+}
+.delete:hover, .delete:active {
+    background-image: url(../assets/trash.gif);
+}
+input[type="button"], .task-options {
+    background-color: white;
+}
+.form-check-input:checked[type=checkbox] {
+    border: 1.5px solid rgb(128, 186, 172);
+    background-color: rgb(40, 167, 69);
+}
+input[type="checkbox"]:checked ~ label { 
+    text-decoration: line-through; 
+    font-style: italic; 
+}
+.task { 
+    background-color: whitesmoke; 
+    border-radius: 8px; 
+    border: 1.5px solid rgba(54, 69, 79, 0.25);
+    box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.250);
+} 
+.task label {
+    max-width: 70% ;
+    flex-grow: 1;
+    align-self: center;
+    text-align: center;
+    text-wrap: wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+@media screen and (max-width: 512px) { 
+    .task label {
+        max-width: 50%;
+    }
+}
+.task-options input[type="button"] { 
+    border: none;
+} 
+.task-options { 
+    width: fit-content;
+    border: 1.5px solid rgba(0, 0, 0, 0.25);
+    padding: 0.5%;
+    border-radius: 12px;
+} 
+@keyframes toast { 
+    from { opacity: 100%; } 
+    to { opacity: 0%; } 
+} 
+#toast { 
+    font-size: 120%; 
+    bottom: 22%; 
+    left: 50%; 
+    transform: translate(-50%); 
+    background-color: rgba(0, 0, 0, 0.225); 
+    border-radius: 14px; 
+    opacity: 0%; 
+} 
